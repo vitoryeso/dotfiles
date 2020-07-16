@@ -3,6 +3,7 @@ syntax on
 inoremap jk <esc>
 inoremap <esc> <nop>
      
+set t_BE=
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -62,6 +63,10 @@ nnoremap <silent> <Leader>- :vertical resize -5<CR>
 nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<Return> {<2><Return>}<Up><tab> 
 
 noremap <Up> <nop>
 noremap <Down> <nop>
