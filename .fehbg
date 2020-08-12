@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/yes0/Pictures/wallpapers/Vibrant/skystain.jpg'

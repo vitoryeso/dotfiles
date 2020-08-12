@@ -102,7 +102,6 @@ exec xrandr --output LVDS-1 --off
 exec fluxgui
 exec setxkbmap -layout us -variant intl
 exec export TERM=xterm
-exec $HOME/.fehbg
 bindsym $mod+Shift+x       exec --no-startup-id shutdown -h now 
 bindsym $mod+Shift+z       exec --no-startup-id reboot
 bindsym $mod+period        exec --no-startup-id setxkbmap -layout us
@@ -141,8 +140,8 @@ client.background       $bg
 for_window [class="^.*"] border pixel 2, title_format "<b> %class >> %title </b>"
 
 # gaps
-gaps inner 15
-gaps outer 5
+gaps inner 10
+gaps outer 0
 
 # focus the child container
 #bindsym $mod+d focus child

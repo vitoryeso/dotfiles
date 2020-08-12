@@ -34,10 +34,9 @@ call plug#end()
 
 let g:gruvbox_contrast_light = 'hard'
 let g:gruvbox_contrast_dark = 'hard'
-
 colorscheme gruvbox
 if strftime("%H") < 18 && strftime("%H") > 5
-    set background=light
+    highlight normal ctermbg=231
 else
     set background=dark
 endif
@@ -63,10 +62,7 @@ nnoremap <silent> <Leader>- :vertical resize -5<CR>
 nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<Return> {<2><Return>}<Up><tab> 
+inoremap {<Return> {<Return><Return>}<Up><tab>
 
 noremap <Up> <nop>
 noremap <Down> <nop>
