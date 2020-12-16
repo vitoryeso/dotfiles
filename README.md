@@ -1,4 +1,5 @@
-# my dotfiles
+# My dotfiles
+![setup](./imgs/setup.png)
 
 - window manager: i3-gaps
 - status bar: polybar
