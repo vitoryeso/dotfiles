@@ -1,5 +1,8 @@
 # my dotfiles
+
+- window manager: i3-gaps
+- status bar: polybar
 - text editor: vim
 - terminal emulator: urxvt
-- window manager: i3, i3-gaps
+- terminal multiplexer: tmux
 

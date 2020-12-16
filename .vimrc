@@ -3,10 +3,11 @@ syntax on
 inoremap jk <esc>
 inoremap <esc> <nop>
      
+set encoding=UTF-8
 set t_BE=
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set number relativenumber
@@ -20,10 +21,14 @@ set hlsearch incsearch
 set smartcase
 set ignorecase
 
+if has('python3')
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'lyuts/vim-rtags'
 Plug 'jremmen/vim-ripgrep'
+"Plug 'davidhalter/jedi-vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-utils/vim-man'
 Plug 'kien/ctrlp.vim'
@@ -32,14 +37,19 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-let g:gruvbox_contrast_light = 'hard'
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+
+""set termguicolors
+""let g:gruvbox_contrast_light = 'hard'
+""let g:gruvbox_contrast_dark = 'hard'
 if strftime("%H") < 18 && strftime("%H") > 5
-    highlight normal ctermbg=231
+    set background=light
 else
     set background=dark
 endif
+
+""let g:gruvbox_transparent_bg=1
+""let g:gruvbox_invert_tabline=1
+""colorscheme gruvbox
 
 let mapleader = " "
 
