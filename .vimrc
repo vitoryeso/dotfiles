@@ -12,8 +12,6 @@ set expandtab
 set smartindent
 set number relativenumber
 set nu rnu
-set nowrap
-set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
@@ -29,6 +27,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'lyuts/vim-rtags'
 Plug 'jremmen/vim-ripgrep'
 "Plug 'davidhalter/jedi-vim'
+"Plug 'flazz/vim-colorschemes'
+"Plug 'lifepillar/vim-gruvbox8'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-utils/vim-man'
 Plug 'kien/ctrlp.vim'
@@ -38,14 +38,14 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 
-""set termguicolors
 ""let g:gruvbox_contrast_light = 'hard'
 ""let g:gruvbox_contrast_dark = 'hard'
-if strftime("%H") < 18 && strftime("%H") > 5
-    set background=light
-else
-    set background=dark
-endif
+colorscheme low
+""if strftime("%H") < 18 && strftime("%H") > 5
+ ""   set background=light
+""else
+ ""   set background=dark
+""endif
 
 ""let g:gruvbox_transparent_bg=1
 ""let g:gruvbox_invert_tabline=1
