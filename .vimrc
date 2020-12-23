@@ -29,10 +29,11 @@ Plug 'jremmen/vim-ripgrep'
 "Plug 'davidhalter/jedi-vim'
 "Plug 'flazz/vim-colorschemes'
 "Plug 'lifepillar/vim-gruvbox8'
+Plug 'preservim/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-utils/vim-man'
 Plug 'kien/ctrlp.vim'
-Plug 'mbbill/undotree'
+""Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
@@ -64,7 +65,14 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-nnoremap <leader>u :UndotreeShow<CR>
+""nnoremap <leader>u :UndotreeShow<CR>
+
+let g:NERDTreeShowHidden = 1
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR> 
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
