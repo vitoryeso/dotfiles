@@ -4,6 +4,7 @@ inoremap jk <esc>
 inoremap <esc> <nop>
      
 set encoding=UTF-8
+set t_Co=256
 set t_BE=
 set noerrorbells
 set tabstop=2 softtabstop=2
@@ -42,6 +43,7 @@ call plug#end()
 ""let g:gruvbox_contrast_light = 'hard'
 ""let g:gruvbox_contrast_dark = 'hard'
 colorscheme low
+set background=dark
 ""if strftime("%H") < 18 && strftime("%H") > 5
  ""   set background=light
 ""else
