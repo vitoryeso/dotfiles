@@ -29,6 +29,10 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec urxvt
 
+# start a mini terminal
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -geometry 80x26 -name "floating_urxvt" 
+for_window [class="URxvt" instance="floating_urxvt$"] floating toggle
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -71,7 +75,7 @@ bindsym $mod+Shift+z exec --no-startup-id reboot
 
 # keyboards
 bindsym $mod+period exec --no-startup-id setxkbmap -layout us
-bindsym $mod+comma exec --no-startup-id setxkbmap -layout us -variant intl
+bindsym $mod+comma exec --no-startup-id setxkbmap -rules evdev -model evdev -layout us -variant intl
 
 # focus_follows_mouse no
 
@@ -247,7 +251,7 @@ mode "resize" {
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id ~/mounthd.sh
 exec --no-startup-id mpd
-exec --no-startup-id feh --bg-fill ~/HD/Linux/linux/Pictures/wallpapers/cool_FHD/gnu.png
+exec --no-startup-id feh --bg-fill ~/Pictures/coffes_lofi.png
 exec --no-startup-id ~/.config/polybar/launch.sh
 #exec --no-startup-id nitrogen --restore; sleep 1
 #exec --no-startup-id manjaro-hello
