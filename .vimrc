@@ -2,7 +2,6 @@ syntax on
 
 inoremap jk <esc>
 inoremap <esc> <nop>
-     
 set encoding=UTF-8
 set t_Co=256
 set t_BE=
@@ -22,19 +21,18 @@ set ignorecase
 
 if has('python3')
 endif
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'lyuts/vim-rtags'
 Plug 'jremmen/vim-ripgrep'
 "Plug 'davidhalter/jedi-vim'
-"Plug 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 "Plug 'lifepillar/vim-gruvbox8'
 Plug 'preservim/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-utils/vim-man'
 Plug 'kien/ctrlp.vim'
-""Plug 'mbbill/undotree'
+Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
@@ -42,7 +40,7 @@ call plug#end()
 
 ""let g:gruvbox_contrast_light = 'hard'
 ""let g:gruvbox_contrast_dark = 'hard'
-colorscheme low
+colorscheme industry
 set background=dark
 ""if strftime("%H") < 18 && strftime("%H") > 5
  ""   set background=light
@@ -88,3 +86,10 @@ noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Right> <nop>
 noremap <Left> <nop>
+
+"" closing vim when its only showing nerdtree
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+
+
+
