@@ -18,6 +18,7 @@ set undofile
 set hlsearch incsearch
 set smartcase
 set ignorecase
+set mouse=a
 
 if has('python3')
 endif
