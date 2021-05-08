@@ -68,13 +68,6 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+d exec firefox
 bindsym $mod+b exec urxvt -geometry 80x50 -T luTask -name 'luTask' -e sh -c "~/luTask/luTask"
 
-# shutdown and reboot
-bindsym $mod+Shift+x exec --no-startup-id shutdown -h now
-bindsym $mod+Shift+z exec --no-startup-id reboot
-
-# keyboards
-bindsym $mod+period exec --no-startup-id setxkbmap -layout us
-bindsym $mod+comma exec --no-startup-id setxkbmap -rules evdev -model evdev -layout us -variant intl
 
 # focus_follows_mouse no
 
@@ -212,6 +205,7 @@ for_window [class="display"] floating enable
 for_window [class="obs"] floating enable
 for_window [class="GTK"] floating enable
 for_window [class="Python"] floating enable
+for_window [title="Telegram"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus

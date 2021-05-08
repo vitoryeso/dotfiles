@@ -1,0 +1,3 @@
+
+set cursor blink delay and rate
+  xset r rate 170 50
