@@ -4,15 +4,20 @@ general {
         interval = 1
 }
 
-order += "time"
 order += "ethernet enp2s0"
+order += "cpu_usage"
 order += "memory"
 order += "volume master"
+order += "time"
 
 memory {
-        format = "[%used / %total]"
+        format = "X memory [%used / %total]"
         threshold_degraded = "10%"
         format_degraded = "MEMORY: %free"
+}
+
+cpu_usage {
+  format = "X usage: %usage"
 }
 
 time {
