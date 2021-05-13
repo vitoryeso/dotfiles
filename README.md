@@ -1,9 +1,8 @@
 # My dotfiles
-![setup](./imgs/setup.png)
 
 - **window manager:** i3-gaps
-- **status bar:** polybar
-- **text editor:** vim
-- **terminal emulator:** urxvt
+- **status bar:** i3bar
+- **text editor:** neovim
+- **terminal emulator:** kitty
 - **terminal multiplexer**: tmux
 
