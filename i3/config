@@ -9,9 +9,10 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 default_border pixel 4
+
 default_floating_border normal
 
 hide_edge_borders none
@@ -271,3 +272,7 @@ for_window [class="Python"] floating enable
 for_window [class="GTK"] floating enable
 for_window [class="tiny_kitty"] floating enable
 for_window [title="Telegram"] floating enable
+for_window [class="(?i)pcmanfm"] floating enable
+for_window [class="(?i)cadence"] floating enable
+
+
