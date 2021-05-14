@@ -274,5 +274,6 @@ for_window [class="tiny_kitty"] floating enable
 for_window [title="Telegram"] floating enable
 for_window [class="(?i)pcmanfm"] floating enable
 for_window [class="(?i)cadence"] floating enable
+for_window [class="(?i)lxappearance"] floating enable
 
 
