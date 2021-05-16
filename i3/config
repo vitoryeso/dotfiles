@@ -204,8 +204,8 @@ mode "resize" {
 bar {
         status_command i3blocks
         position top
-        separator_symbol "                                                                                       "
-        font xft:Hack-Regular.ttf 9
+        separator_symbol "          |        "
+        font xft:Hack-Regular.ttf 10
         colors {
           background  #000011
 
