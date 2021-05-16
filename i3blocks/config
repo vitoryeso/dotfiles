@@ -1,0 +1,74 @@
+[click]
+full_text=Click me!
+command=echo "Got clicked with button $button"
+color=#F79494
+
+# Guess the weather hourly
+[weather]
+command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=3600
+color=#A4C2F4
+
+# Query my default IP address only on startup
+[ip]
+command=hostname -i | awk '{ print "IP:" $1 }'
+interval=once
+color=#91E78B
+
+[cpu_usage]
+command=/usr/bin/cpu_usage
+interval=10
+LABEL=  
+color=#ff3030
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+
+[pacman-updates]
+command=/usr/bin/arch-update
+markup=pango
+interval=3600
+QUIET=false
+WATCH=^linux.* ^pacman.*
+BASE_COLOR=#5fff5f
+UPDATE_COLOR=#FF0000
+
+[bandwidth]
+command=/usr/bin/bandwidth2 
+interval=persist
+markup=pango
+LABEL=⮃
+color=#00ff00
+
+[memory]
+command=/usr/bin/memory
+color=#ffff00
+label= 
+interval=15
+
+[volume-pulseaudio]
+command=/usr/bin/volume-pulseaudio
+interval=persist
+LONG_FORMAT="${SYMB} ${VOL}%"
+AUDIO_HIGH_SYMBOL=🔊
+#AUDIO_MED_THRESH=50
+AUDIO_MED_SYMBOL=🔉
+#AUDIO_LOW_THRESH=0
+AUDIO_LOW_SYMBOL=🔈
+#AUDIO_DELTA=6
+#DEFAULT_COLOR="#ffffff"
+AUDIO_MUTED_SYMBOL=🔇
+#color=#ff0000
+#USE_ALSA_NAME=0
+#USE_DESCRIPTION=0
+## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
+SUBSCRIBE=1
+
+# Update time every 5 seconds
+[time]
+command=/usr/bin/calendar
+interval=5
+DATEFMT=+%H:%M:%S
+HEIGHT=180
+WIDTH=220

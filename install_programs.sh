@@ -1,4 +1,4 @@
-pacman -S feh transmission deepin-screenshot noto-fonts-emoji ttf-joypixels telegram-desktop discord gsimplecal arch-install-scripts pcmanfm-gtk3 zsh deepin-gtk-theme lxappearance-gtk3
+pacman -S feh transmission deepin-screenshot noto-fonts-emoji ttf-joypixels telegram-desktop discord gsimplecal arch-install-scripts pcmanfm-gtk3 zsh deepin-gtk-theme lxappearance-gtk3A vlc
 
 # lxappearance-gtk3 is for switch gtk theme easily
 
@@ -6,5 +6,5 @@ pacman -S feh transmission deepin-screenshot noto-fonts-emoji ttf-joypixels tele
 git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/
 
 # 0.5 version of neovim
-yay -S neovim-nightly-git
+yay -S neovim-nightly-git tmux-mem-cpu-load
 
