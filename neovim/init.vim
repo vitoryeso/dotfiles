@@ -32,6 +32,13 @@ set scrolloff=8
 
 let mapleader = " "
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'ycm-core/YouCompleteMe'
+
+call plug#end()
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -46,9 +53,19 @@ noremap <Down> <nop>
 noremap <Right> <nop>
 noremap <Left> <nop>
 
-call plug#begin('~/.vim/plugged')
 
-Plug 'preservim/nerdtree'
-Plug 'nvim-telescope/telescope.nvim'
+let g:ycm_global_ycm_extra_conf = "/home/yes0/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py"
+let g:ycm_autoclose_preview_window_after_completion = 1
 
-call plug#end()
+
+let g:NERDTreeShowHidden = 1
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR> 
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+nnoremap <silent> <Leader>+ :vertical resize +5<CR>
+nnoremap <silent> <Leader>- :vertical resize -5<CR>
+
+"" closing vim when its only showing nerdtree
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
