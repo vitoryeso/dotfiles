@@ -11,21 +11,14 @@
 
 set $mod Mod1
 
-default_border pixel 4
-
-default_floating_border normal
-
-hide_edge_borders none
-
 exec --no-startup-id xset r rate 170 50
 
 # wallpapers
-exec --no-startup-id feh --bg-center --randomize ~/HD/win/pictures_windows/wallpapers/animo  
+exec --no-startup-id feh --bg-center ~/anime/driving.jpg
 # choose new random wallpaper
 bindsym $mod+Right exec --no-startup-id feh --bg-center --randomize ~/HD/win/pictures_windows/wallpapers/animo  
 
-
-bindsym Print exec --no-startup-id  deepin-screenshot
+bindsym Print exec --no-startup-id deepin-screenshot
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -65,10 +58,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec gnome-terminal
 
 # start a tiny terminal
-bindsym $mod+Shift+Return exec kitty --class tiny_kitty
+#bindsym $mod+Shift+Return exec kitty --class tiny_kitty
 
 
 # start firefox
@@ -148,6 +141,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# switch to previous workspace
+bindsym $mod+Tab workspace prev
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -204,8 +199,8 @@ mode "resize" {
 bar {
         status_command i3status
         position top
-        separator_symbol "              |            "
-        font xft:Hack-Regular.ttf 10
+        separator_symbol "|"
+        font xft:Hack-Regular.ttf 8
         colors {
           background  #000011
 
@@ -221,11 +216,11 @@ bar {
   client.unfocused        #333333 #222222 #888888 #292d2e #222222
 
 # gaps
-gaps inner 7
-gaps inner 7
+#gaps inner 7
+#gaps inner 7
 
 #
-smart_borders on
+#smart_borders on
 
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
@@ -276,5 +271,6 @@ for_window [class="(?i)pcmanfm"] floating enable
 for_window [class="(?i)cadence"] floating enable
 for_window [class="(?i)lxappearance"] floating enable
 for_window [class="Yad"] floating enable
+for_window [class="Display"] floating enable
 
 
