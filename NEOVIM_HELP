@@ -1,0 +1,2 @@
+for python completion, install this:
+  pacman -S python-pynvim
