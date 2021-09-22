@@ -2,6 +2,10 @@
 autoload -U colors && colors
 PS1="%B%{$fg[white]%}[%{$fg[green]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[yellow]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
 
+alias vim=nvim
+alias ll='ls -l'
+alias ls='ls --color'
+alias firefox='firefox-developer-edition'
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
