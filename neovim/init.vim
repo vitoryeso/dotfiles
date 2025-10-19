@@ -1,7 +1,6 @@
 syntax on
 
 inoremap jk <esc>
-inoremap <esc> <nop>
 set encoding=UTF-8
 
 " gud tab/indent options
