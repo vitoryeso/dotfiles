@@ -24,9 +24,6 @@ set noswapfile
 " da um alerta visual no canto esquerdo
 set signcolumn=yes
 
-" procura conforme vc ja vai digitando
-set incsearch
-
 " FANTASTIC
 set scrolloff=8
 
@@ -54,7 +51,6 @@ noremap <Right> <nop>
 noremap <Left> <nop>
 
 
-let g:ycm_global_ycm_extra_conf = "/home/yes0/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py"
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 
@@ -64,8 +60,8 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-nnoremap <silent> <Leader>+ :vertical resize +5<CR>
-nnoremap <silent> <Leader>- :vertical resize -5<CR>
+nnoremap <silent> <Leader>+ :vertical resize +15<CR>
+nnoremap <silent> <Leader>- :vertical resize -15<CR>
 
 "" closing vim when its only showing nerdtree
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+"autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
